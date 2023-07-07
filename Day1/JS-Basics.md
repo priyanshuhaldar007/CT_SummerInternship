@@ -264,17 +264,17 @@ switch (day) {
     console.log("It's a weekend day.");
 }
 ```
-#LOOPS
+## LOOPS
 JavaScript supports different kinds of loops:
 
-+ ##### for - loops through a block of code a number of times
++ **for** - loops through a block of code a number of times
 ```javascript
 for (let i = 0; i < 5; i++) {
   text += "The number is " + i + "<br>";
 }
 ```
 
-+ ##### for/in - loops through the properties of an object
++ **for/in** - loops through the properties of an object
 ```javascript
 const numbers = [45, 4, 9, 16, 25];
 
@@ -284,7 +284,7 @@ for (let x in numbers) {
 }
 ```
 
-+ ##### for/of - loops through the values of an iterable object
++ **for/of** - loops through the values of an iterable object
 ```javascript
 const cars = ["BMW", "Volvo", "Mini"];
 
@@ -294,7 +294,7 @@ for (let x of cars) {
 }
 ```
 
-+ ##### while - loops through a block of code while a specified condition is true
++ **while** - loops through a block of code while a specified condition is true
 ```javascript
 while (i < 10) {
   text += "The number is " + i;
@@ -302,7 +302,7 @@ while (i < 10) {
 }
 
 ```
-+ ##### do/while - also loops through a block of code while a specified condition is true
++ **do/while** - also loops through a block of code while a specified condition is true
 ```javascript
 do {
   text += "The number is " + i;
@@ -314,7 +314,7 @@ while (i < 10);
 ## Array
 The Array object is used to store multiple values in a single variable.
 
-+ #### Creating an Array
+### Creating an Array
 ```javascript
 // Array literal notation
 const myArray = [1, 2, 3, 4, 5];
@@ -322,7 +322,7 @@ const myArray = [1, 2, 3, 4, 5];
 // Using the Array constructor
 const myArray = new Array(1, 2, 3, 4, 5);
 ```
-+ #### Accessing Array Elements
+### Accessing Array Elements
 ```javascript
 const myArray = ['apple', 'banana', 'orange'];
 
@@ -332,7 +332,7 @@ for (let i = 0; i < myArray.length; i++) {
   console.log(myArray[i]);
 }
 ```
-+ #### Modifying Array Elements
+### Modifying Array Elements
 ```javascript
 
 const myArray = ['apple', 'banana', 'orange'];
@@ -352,10 +352,10 @@ console.log(myArray); // Output: ['apple', 'grape', 'orange']
 
 + forEach(): Executes a provided function once for each array element.
 
-###Object
+## Object
 Objects are a fundamental data type in JavaScript that allow you to store key-value pairs.
 
-#####Creation 
+### Creation 
 ```javascript
 const myObject = {
   key1: value1,
@@ -363,7 +363,7 @@ const myObject = {
   key3: value3
 };
 ```
-#####Accessing Object Properties
+### Accessing Object Properties
 ```javascript
 const myObject = {
   name: 'John',
@@ -374,5 +374,3 @@ const myObject = {
 console.log(myObject.name); // Output: 'John'
 console.log(myObject['age']); // Output: 30
 ```
-
-                                           ## THANK YOU !!
