@@ -1,3 +1,4 @@
+// importing http library
 const http = require('http');
 
 const host = 'localhost';

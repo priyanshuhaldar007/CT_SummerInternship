@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "name": "Priyanshu Haldar",
+    "email": "prianshu1843@gmail.com"
+  },
+  {
+    "id": 2,
+    "name": "Dolly Kumari",
+    "email": "dollypandey979850@gmail.com"
+  },
+  {
+    "id": 3,
+    "name": "Vinayak Raj",
+    "email": "dummy123@gmail.com"
+  },
+  {
+    "id": 5,
+    "name": "Sayak Rudra",
+    "email": "sayakrudra123@gmail.com"
+  },
+  {
+    "id": 6,
+    "name": "Adarsh Keshri",
+    "email": "adarshkeshri123@gmail.com"
+  },
+  {
+    "id": 4,
+    "name": "John Doe",
+    "email": "johndoe123@gmail.com"
+  }
+]

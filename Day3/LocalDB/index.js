@@ -2,7 +2,7 @@
 const fs = require("fs");
 
 // defining the db file
-const filePath = "db.json";
+const filePath = "./LocalDB/db.json";
 
 // Read JSON data from file
 function getData() {
@@ -43,22 +43,23 @@ function addData(item) {
     if (!flag) {
         data.push(item);
         writeData(data);
+        return {response: 'Data added successfully'}
     } else {
-        console.log("data with same id already exists");
-        return;
+        return {response:"data with same id already exists"};
     }
 }
 
 // Update operation - Update an existing item in the JSON file
 function updateData(dataId, updatedItem) {
     const allData = getData();
+    console.log(dataId, updatedItem);
     const dataIndex = allData.findIndex((item) => item.id === dataId);
     if (dataIndex !== -1) {
         allData[dataIndex] = { ...allData[dataIndex], ...updatedItem };
         writeData(allData);
-        console.log("Data updated successfully");
+        return {response:"Data updated successfully"};
     } else {
-        console.log("Data not found");
+        return {response:"Data not found",input:[dataId, updatedItem]};
     }
 }
 
@@ -68,18 +69,21 @@ function deleteData(itemId) {
     const updatedData = data.filter((item) => item.id !== itemId);
     if (updatedData.length < data.length) {
         writeData(updatedData);
-        console.log("Data deleted successfully");
+        return {response:"Data deleted successfully"};
     } else {
-        console.log("Data not found");
+        return {response:"Data not found"};
     }
 }
 
-addData({ id: 1, name: "Data 1", body:"object1" });
-addData({ id: 2, name: "Data 2", body:"object2" });
-console.log(getData());
+// Get specific data
+function getOneData(itemId){
+    const allData = getData();
+    const dataIndex = allData.findIndex((item) => item.id === Number(itemId));
+    if (dataIndex !== -1) {
+        return {response:allData[dataIndex]};
+    } else {
+        return {response:"Data not found"};
+    }
+}
 
-updateData(1, { name: "Updated Data 1" });
-console.log(getData());
-
-deleteData(2);
-console.log(getData());
+module.exports = { addData, getData, updateData, deleteData, getOneData };
